@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoSaver - Your Guide to Energy Efficiency</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>EcoSaver</h1>
+        <nav>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#tips">Tips</a></li>
+            <li><a href="#calculator">Calculator</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#resources">Resources</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section id="home">
+      <div class="container">
+        <h2>Welcome to EcoSaver: Your Sustainable Lifestyle Companion</h2>
+        <p>
+          Welcome to ecoSaver, the go-to website for anyone looking to embrace a
+          more sustainable lifestyle. Our mission is to provide you with the
+          tools, resources, and inspiration to make eco-friendly choices every
+          day. This is your guide to energy efficiency and sustainable living.
+          Learn how you can save energy and reduce your carbon footprint with
+          our easy-to-follow tips and tools.
+        </p>
+      </div>
+    </section>
+
+    <section id="tips">
+      <div class="container">
+        <h2>Energy Saving Tips</h2>
+        <div class="tip-container">
+          <div class="tip-card" onclick="showTip('home')">
+            <img
+              src="images/home-energy-saving.jpg"
+              alt="Energy Saving Tips for Home"
+              class="tip-image"
+            />
+
+            <h3>For Your Home</h3>
+          </div>
+          <div class="tip-card" onclick="showTip('office')">
+            <img
+              src="images/office-energy-saving.jpg"
+              alt="Energy Saving Tips for Office"
+              class="tip-image"
+            />
+            <h3>For Your Office</h3>
+          </div>
+          <div class="tip-card" onclick="showTip('hospital')">
+            <img
+              src="images/hospital-energy-saving.jpg"
+              alt="Energy Saving Tips for Healthcare facilities"
+              class="tip-image"
+            />
+            <h3>For Healthcare</h3>
+          </div>
+          <div class="tip-card" onclick="showTip('agriculture')">
+            <img
+              src="images/agriculture-energy-saving.jpg"
+              alt="Energy Saving Tips for Agriculture"
+              class="tip-image"
+            />
+            <h3>For Agriculture</h3>
+          </div>
+          <div class="tip-card" onclick="showTip('transportation')">
+            <img
+              src="images/transportation-energy-saving.png"
+              alt="Energy Saving Tips for Transportation"
+              class="tip-image"
+            />
+            <h3>For Transportation</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="calculator">
+      <div class="container">
+        <h2>Energy Consumption Calculator</h2>
+        <form id="energyForm">
+          <label for="electricity">Electricity Usage (kWh per month):</label>
+          <input type="number" id="electricity" name="electricity" required />
+          <label for="gas">Gas Usage (therms per month):</label>
+          <input type="number" id="gas" name="gas" required />
+          <button type="button" onclick="calculateEnergy()">Calculate</button>
+        </form>
+        <p id="result"></p>
+      </div>
+    </section>
+
+    <section id="blog">
+      <div class="container">
+        <h2>Blog</h2>
+        <p>
+          Our blog is dedicated to providing you with insightful articles,
+          practical tips, and inspiring stories that empower you to live a more
+          sustainable life. Stay updated with our latest articles on energy
+          conservation, sustainability, and green living.
+        </p>
+        <ul>
+          <li>
+            <a href="blog/carbo.html">How to Reduce Your Carbon Footprint</a>
+          </li>
+          <li>
+            <a href="blog/esdevices.html"
+              >Top 10 Energy-Saving Devices for Your Home</a
+            >
+          </li>
+          <li><a href="blog/future.html">The Future of Renewable Energy</a></li>
+          <li>
+            <a href="blog/swaps.html"
+              >Simple Swaps for a Zero-Waste Lifestyle</a
+            >
+          </li>
+          <li>
+            <a href="blog/ecological.html"
+              >Understanding Your Ecological Footprint</a
+            >
+          </li>
+          <li>
+            <a href="blog/greencleaning.html"
+              >Green Cleaning: Eco-Friendly Household Tips</a
+            >
+          </li>
+          <li>
+            <a href="blog/wardrobe.html"
+              >Sustainable Fashion: Tips for a Greener Wardrobe</a
+            >
+          </li>
+          <li>
+            <a href="blog/city.html"
+              >Urban Gardening: Growing Your Own Food in the City</a
+            >
+          </li>
+          <li>
+            <a href="blog/started.html"
+              >Plastic-Free Living: How to Get Started</a
+            >
+          </li>
+          <li>
+            <a href="blog/seasonally.html"
+              >The Benefits of Eating Locally and Seasonally</a
+            >
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="resources">
+      <div class="container">
+        <h2>Resources</h2>
+        <p>
+          Find additional resources, tools, and information to help you save
+          energy and live sustainably.
+        </p>
+        <ul>
+          <li><a href="energystar.html">Energy Star</a></li>
+          <li><a href="doe.html">Department of Energy</a></li>
+          <li><a href="epa.html">EPA Green Power Partnership</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </section>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="modal-title"></h2>
+        <p id="modal-content"></p>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 EcoSaver. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

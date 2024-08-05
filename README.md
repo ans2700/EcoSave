@@ -1,2 +1,2 @@
-# EcoSave
+# ecoSave
 Created with CodeSandbox
